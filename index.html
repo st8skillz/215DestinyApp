@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Homework :Destiny App</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="destiny-app">
+  <div v-for="card in cards">
+  <div class="card"
+       v-bind:class="card.color">
+    <!--img goes here-->
+    <img v-bind:src="card.img"></img>
+    <div class="health"> {{card.health}}</div>
+    <div class="rarity rare" v-bind:class="{rare:card.rarity,legendary:!card.rarity}"> {{card.setNumber}}</div>
+    <div class="name">{{card.name}}</div>
+    <div class="affl villain">{{card.affl}}</div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
